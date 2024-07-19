@@ -1,0 +1,202 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 70%);
+  --text-color-light: hsl(0, 0%, 60%);
+  --body-color: hsl(0, 0%, 0%);
+  --container-color: hsl(0, 0%, 8%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Montserrat", sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.3rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+.contact__container{
+    background: var(--bg1);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+/*============== Aside Section ==============*/
+.contact__aside{
+    background: var(--bg1);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 5.5rem;
+}
+
+.aside__img{
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contact__aside h2{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact__aside p{
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contact__details li{
+    display: flex;
+    gap:  1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact__socials{
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+/* .contact__socials a{
+    background: var(--bg1);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+
+.contact__socials a:hover{
+    background: transparent;
+} */
+
+/*============== Form Section ==============*/
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form__name{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.contact__form input[type="text"]{
+    width: 50%;
+}
+
+input,
+textarea{
+    /* width: 100%; */
+    padding: 1rem;
+    /* background: var(--bg);
+    color: var(--black); */
+    background: var(--container-color);
+    color: white;
+}
+
+.contact__form .button{
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.button{
+    background-color: hsla(0, 0%, 100%, .2);
+    padding: 1.25rem 1.25rem;
+    /* color: var(--title-color); */
+    color: yellow;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-family: var(--second-font);
+    font-weight: var(--font-semi-bold);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 20px;
+  }
+  
+  .button i{
+    font-size: 1.25rem;
+    transition: transform .4s;
+    font-weight: initial;
+  }
+  
+  .button:hover i{
+    transform: translateX(.25rem);
+  }
+
+
+/*============== Media Queries Section ==============*/
+@media screen and (max-width: 1024px){
+    .contact{
+        padding-bottom: 0;
+    }
+
+    .contact__container{
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .contact__aside{
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+
+    .contact__form{
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+}
+
+/*============== Media Queries Section ==============*/
+@media screen and (max-width: 600px){
+    .contact__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .contact__form{
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form__name{
+        flex-direction: column;
+    }
+
+    .form__name input[type="text"]{
+        width: 90.2%;
+    }
+}
